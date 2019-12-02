@@ -32,42 +32,71 @@ time.sleep(0.5)
 print("")
 piece(name + "\n", 0.5, 0.15)
 
-while True:
-  time.sleep(0.05)
-  piece("\b\b")
-while True:
-  piece("How much do you regret? Low or enough?\n")
-  difficultyC = input().strip().lower()
-  time.sleep(0.5)
-  print("")
+#story
+piece("""It's a forest, a rather pretty one.
+But that's not why your here, theres a job that has to be done.\n\n""")
 
-  if len(difficultyC) != 0:
-    if difficultyC[0][0] == "l":
-      piece("Low? It's a simple start.\n\n")
-      difficulty = 0
-      break
-    elif difficultyC[0][0] == "e":
-      piece("Enough? That's going to hurt, however much that is.\n\n")
-      difficulty = 1
-      break
+piece("""As your sneaking through it you hear a sound.
+It's low pitched, barely audible, but there none the less.\n\n""")
+
+piece("It happens again, louder...\n")
+time.sleep(1)
+piece("Louder and faster,\n")
+time.sleep(0.5)
+for i in range(5):
+  i += 1
+  piece("and again,\n", 0.2, 0)
+
+
+#choices
+piece("It's comming, decide now. Are you hiding or running.")
+choice = input().strip().lower()
+time.sleep(0.5)
+print("")
+
+if len(choice) != 0:
+  if choice[0][0] == "r":
+    piece("""As you flee through the trees, you make quick moves, jumping, ducking and sliding, oblivious to your mistakes.\n\n""")
+    time.sleep(2)
+    piece("""Thoese mistakes have lead you here, a dead end. 400 feet of shear rock stright down, the only thing ahead. No trees, no bushes, nothing to hide behind  , except what's ahead.""")
+
+    piece("It's going to be the fight of a life or the riskiest rock climbing ever seen.")
+
+    if len(choice) != 0:
+      if choice[0][0] == "r":
+        piece("""As you flee through the trees, you make quick moves, jumping, ducking and sliding, oblivious to your mistakes.\n\n""")
+        time.sleep(2)
+        piece("""Thoese mistakes have lead you here, a dead end. 400 feet of shear rock stright down, the only thing ahead. No trees, no bushes, nothing to hide behind  , except what's ahead.""")
+
+        piece("It's going to be the fight of a life or the riskiest rock climbing ever seen.")
+
+        piece("So what is it? A fight or hiding?")
+        choice = input().strip().lower()
+        time.sleep(0.5)
+        print("")
+
+      elif difficultyC[0][0] == "h":
+        piece("Enough? That's going to hurt, however much that is.\n\n")
+
+      else:
+        piece("It's over, {}, your indecision has been your downfall.\n".format(name))
     else:
-      piece("Thats not what I asked for.\n")
-      fails += 1
-  else:
-    piece("Thats not what I asked for.\n")
-    fails += 1
+      piece("It's over, {}, your indecision has been your downfall.\n".format(name))
 
 
 
-if difficulty ==0:
-  piece("""It's a day in the forest.
-There isn't much here but your small camp.
-Then you rember, what has happened, it hits you like a truck.
-The day is young but time is the most valualbe resource here.
-There is no escaping what is comming.
-Only a few days remain until the last bridge will be blocked.\n\n""")
-  piece("""You'r still hurt from the prevous day, you could rest here for the day or travel on.
-What are you doing?""")
-  choice = input().strip().lower()
-  
 
+
+
+    elif difficultyC[0][0] == "h":
+      piece("Enough? That's going to hurt, however much that is.\n\n")
+
+
+  print("the other way")
+else:
+  piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+
+piece("So what is it? A fight or hiding?")
+      choice = input().strip().lower()
+      time.sleep(0.5)
+      print("")
