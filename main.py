@@ -21,7 +21,7 @@ consectetur, adipisci velit...\n\n""", delay = 0.2, speed = 0.03):
 
 #intro scene
 
-piece("Welcome to something new.\n\n", 0.5, 0.15)
+piece("Welcome to a New Choice.\n\n", 0.5, 0.15)
 
 piece("""A short story...        
 Happy fun, simple morals and a little story.\n\n""", 0.5)
@@ -46,37 +46,74 @@ time.sleep(0.5)
 for i in range(5):
   i += 1
   piece("and again,\n", 0.2, 0)
+print("")
 
 
 #choices
-piece("It's comming, decide now. Are you hiding or running.")
+piece("It's comming, decide now. Are you hiding or running.\n")
 choice = input().strip().lower()
 time.sleep(0.5)
 print("")
 
 if len(choice) != 0:
   if choice[0][0] == "r":
+    #run
     piece("""As you flee through the trees, you make quick moves, jumping, ducking and sliding, oblivious to your mistakes.\n\n""")
-    time.sleep(2)
-    piece("""Thoese mistakes have lead you here, a dead end. 400 feet of shear rock stright down, the only thing ahead. No trees, no bushes, nothing to hide behind  , except what's ahead.""")
+    time.sleep(1)
+    piece("""Thoese mistakes have lead you here, a dead end. 400 feet of shear rock stright down, the only thing ahead.
+No trees, no bushes, nothing to hide behind,
+except what's ahead.\n\n""")
 
-    piece("It's going to be the fight of a life or the riskiest rock climbing ever seen.")
+    piece("It's going to be the fight of a life or the riskiest rock climbing ever seen.\n")
+
+    piece("So what is it? A fight or hiding?\n")
+    choice = input().strip().lower()
+    time.sleep(0.5)
+    print("")
 
     if len(choice) != 0:
-      if choice[0][0] == "r":
-        piece("""As you flee through the trees, you make quick moves, jumping, ducking and sliding, oblivious to your mistakes.\n\n""")
-        time.sleep(2)
-        piece("""Thoese mistakes have lead you here, a dead end. 400 feet of shear rock stright down, the only thing ahead. No trees, no bushes, nothing to hide behind  , except what's ahead.""")
-
-        piece("It's going to be the fight of a life or the riskiest rock climbing ever seen.")
-
-        piece("So what is it? A fight or hiding?")
-        choice = input().strip().lower()
+      if choice[0][0] == "f":
+        #fight
+        piece("After unsheathing you weapon, you turn and face toward the woods.\n\nWaiting.\n\n")
         time.sleep(0.5)
-        print("")
+        piece("But just then the cliff collapses and {} falls, into the void that awaits.\n".format(name))
 
-      elif difficultyC[0][0] == "h":
-        piece("Enough? That's going to hurt, however much that is.\n\n")
+      elif choice[0][0] == "h":
+        #hide
+        piece("The only place to hide, is hanging off the cliff.\nAs you climb down the side.\n3 feet down.\n5 feet down.\n9 feet down.\n\nNo sounds to hear.")
+        piece("Just waitning.\nUntill your grip flaters, {} falls into the void bellow.\n".format(name))
+
+      else:
+        piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+    else:
+      piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+
+
+  elif choice[0][0] == "h":
+    #hide
+    piece("As you search in panic, you realise there are only two options.\nUp a tree or down a cave.")
+    time.sleep(0.5)
+    piece("")
+
+    piece("So what is it? A tree or cave?\n")
+    choice = input().strip().lower()
+    time.sleep(0.5)
+    print("")
+
+    if len(choice) != 0:
+      if choice[0][0] == "t":
+        #tree
+        piece("While scambling up the tree you realize your mistake:")
+        time.sleep(0.5)
+        piece("What has been following you, can fly.")
+        time.sleep(0.5)
+        piece("Panic strikes and you fall out of the tree.\nAfter landing, {} barely retains conscious.\nThe only thing left for {} to do is...\n\nWait.\n".format(name))
+
+      elif choice[0][0] == "c":
+        #cave
+        piece("Decending into the cave you pull out your torch.\nOnly to learn of it's nonfunctinal state.")
+        time.sleep(1)
+        piece("Turning around, you wait ")
 
       else:
         piece("It's over, {}, your indecision has been your downfall.\n".format(name))
@@ -87,16 +124,11 @@ if len(choice) != 0:
 
 
 
-
-    elif difficultyC[0][0] == "h":
-      piece("Enough? That's going to hurt, however much that is.\n\n")
+  else:
+    piece("It's over, {}, your indecision has been your downfall.\n".format(name))
 
 
   print("the other way")
 else:
   piece("It's over, {}, your indecision has been your downfall.\n".format(name))
 
-piece("So what is it? A fight or hiding?")
-      choice = input().strip().lower()
-      time.sleep(0.5)
-      print("")
