@@ -30,7 +30,13 @@ piece("What is your name?\n")
 name = input().strip().lower()
 time.sleep(0.5)
 print("")
-piece(name + "\n", 0.5, 0.15)
+if len(name) >= 9:
+  rng = "Well, "
+elif len(name) <=7:
+  rng = "Ah, "
+else:
+  rng = "Truly Tragic, "
+piece(rng + name + "\n", 0.5, 0.15)
 
 #story
 piece("""It's a forest, a rather pretty one.
@@ -80,8 +86,8 @@ except what's ahead.\n\n""")
 
       elif choice[0][0] == "h":
         #hide
-        piece("The only place to hide, is hanging off the cliff.\nAs you climb down the side.\n3 feet down.\n5 feet down.\n9 feet down.\n\nNo sounds to hear.")
-        piece("Just waiting.\nUntill your grip flaters,\n{} falls into the void bellow.\n".format(name))
+        piece("The only place to hide, is hanging off the cliff.\nAs you climb down the side.\n3 feet down.\n5 feet down.\n9 feet down.\n\nNo sounds to hear.\n\n")
+        piece("Waiting.\n\nUntill your grip flaters,\n{} falls into the void bellow.\n".format(name))
 
       else:
         piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
@@ -91,7 +97,7 @@ except what's ahead.\n\n""")
 
   elif choice[0][0] == "h":
     #hide
-    piece("As you search in panic, you realise there are only two options.\nUp a tree or down a cave.")
+    piece("As you search in panic, you realise there are only two options.\nUp a tree or down a cave.\n\n")
     time.sleep(0.5)
     piece("")
 
@@ -105,7 +111,7 @@ except what's ahead.\n\n""")
         #tree
         piece("While scambling up the tree you realize your mistake:")
         time.sleep(0.5)
-        piece("What has been following you, can fly.")
+        piece("What has been following you,\n\ncan fly.\n\n")
         time.sleep(0.5)
         piece("Panic strikes and you fall out of the tree.\nAfter landing, {} barely retains conscious.\nThe only thing left for {} to do is...\n\nWait.\n".format(name))
 
@@ -113,22 +119,15 @@ except what's ahead.\n\n""")
         #cave
         piece("Decending into the cave you pull out your torch.\nOnly to learn of it's nonfunctinal state.\n")
         time.sleep(1)
-        piece("Turning around, you lose your footing and fall.\nDown,\nDown,\nDown.")
+        piece("Turning around, you lose your footing and fall.\nDown,\nDown,\nDown.\n\n")
+        piece("Sore, but alive you open your eyes.\n\nIt was just the same as when they were closed.\n\nThere is nothing left for {} to do, except... \n\nWait".format(name))
 
       else:
         piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
     else:
       piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
-
-
-
-
-
   else:
     piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
-
-
-  print("the other way")
 else:
   piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
 
