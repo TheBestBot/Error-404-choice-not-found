@@ -1,4 +1,4 @@
-import sys, time
+import sys, time, os
 
 fails = 0
 difficulty = 0
@@ -80,6 +80,7 @@ except what's ahead.\n\n""")
     if len(choice) != 0:
       if choice[0][0] == "f":
         #fight
+        os.system("clear")
         piece("After unsheathing your weapon, you turn and face toward the woods.\n\nWaiting.\n\n")
         time.sleep(0.5)
         piece("But just then the cliff collapses and {} falls, into the void that awaits.\n".format(name))
@@ -90,9 +91,9 @@ except what's ahead.\n\n""")
         piece("Waiting.\n\nUntill your grip flaters,\n{} falls into the void bellow.\n".format(name))
 
       else:
-        piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
+        piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
     else:
-      piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
+      piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
 
 
   elif choice[0][0] == "h":
@@ -109,11 +110,11 @@ except what's ahead.\n\n""")
     if len(choice) != 0:
       if choice[0][0] == "t":
         #tree
-        piece("While scambling up the tree you realize your mistake:")
+        piece("While scambling up the tree you realize your mistake:\n")
         time.sleep(0.5)
         piece("What has been following you,\n\ncan fly.\n\n")
         time.sleep(0.5)
-        piece("Panic strikes and you fall out of the tree.\nAfter landing, {} barely retains conscious.\nThe only thing left for {} to do is...\n\nWait.\n".format(name))
+        piece("Panic strikes and you fall out of the tree.\nAfter landing, {} barely retains conscious.\nThe only thing left for {} to do is...\n\nWait.\n".format(name, name))
 
       elif choice[0][0] == "c":
         #cave
@@ -123,11 +124,11 @@ except what's ahead.\n\n""")
         piece("Sore, but alive you open your eyes.\n\nIt was just the same as when they were closed.\n\nThere is nothing left for {} to do, except... \n\nWait".format(name))
 
       else:
-        piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
+        piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
     else:
-      piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
+      piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
   else:
-    piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
+    piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
 else:
-  piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
+  piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
 
