@@ -74,7 +74,7 @@ except what's ahead.\n\n""")
     if len(choice) != 0:
       if choice[0][0] == "f":
         #fight
-        piece("After unsheathing you weapon, you turn and face toward the woods.\n\nWaiting.\n\n")
+        piece("After unsheathing your weapon, you turn and face toward the woods.\n\nWaiting.\n\n")
         time.sleep(0.5)
         piece("But just then the cliff collapses and {} falls, into the void that awaits.\n".format(name))
 
@@ -84,9 +84,9 @@ except what's ahead.\n\n""")
         piece("Just waitning.\nUntill your grip flaters, {} falls into the void bellow.\n".format(name))
 
       else:
-        piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+        piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
     else:
-      piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+      piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
 
 
   elif choice[0][0] == "h":
@@ -116,19 +116,19 @@ except what's ahead.\n\n""")
         piece("Turning around, you wait ")
 
       else:
-        piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+        piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
     else:
-      piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+      piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
 
 
 
 
 
   else:
-    piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+    piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
 
 
   print("the other way")
 else:
-  piece("It's over, {}, your indecision has been your downfall.\n".format(name))
+  piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
 
