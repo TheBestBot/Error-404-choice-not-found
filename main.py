@@ -7,6 +7,7 @@ health = 100
 attack = 10
 blockAmount = 10
 block = 0
+autobreak = False
 
 def piece(text = """Lorem Ipsum,
 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
@@ -27,6 +28,8 @@ piece("""A short story...
 Happy fun, simple morals and a little story.\n\n""", 0.5)
 
 while True:
+  if autobreak == True:
+    break
   piece("What is your name?\n")
   name = input().strip().lower()
   time.sleep(0.5)
@@ -132,9 +135,12 @@ while True:
   else:
     piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
 
+
+  time.sleep(8)
+
   os.system("clear") 
 
-  piece("Only {} and the darkness.\n", 0.5, 0.2)
+  piece("Only {} and the darkness.\n".format(name), 0.5, 0.2)
   piece("Was there ever a choice, or was all destined to end here?\n\n", 0.5, 0.2)
 
 
@@ -153,14 +159,15 @@ while True:
 
       elif choice[0][0] == "n":
         piece("The end is all that was wanted.\n\n", 0.5, 0.2)
+        autobreak = True
         break
 
       else:
         piece("Thats not what I asked for.\n")
     else:
       piece("Thats not what I asked for.\n")
-
+time.sleep(5)
 os.system("clear")
 piece("There will be no more.",  0.5, 0.1)
-time.sleep(3)
+time.sleep(10)
 os.system("clear")
