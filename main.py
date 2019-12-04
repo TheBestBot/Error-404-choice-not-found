@@ -80,7 +80,6 @@ except what's ahead.\n\n""")
     if len(choice) != 0:
       if choice[0][0] == "f":
         #fight
-        os.system("clear")
         piece("After unsheathing your weapon, you turn and face toward the woods.\n\nWaiting.\n\n")
         time.sleep(0.5)
         piece("But just then the cliff collapses and {} falls, into the void that awaits.\n".format(name))
@@ -132,3 +131,8 @@ except what's ahead.\n\n""")
 else:
   piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
 
+os.system("clear") 
+
+piece("Only {} and the darkness.\n", 0.5, 0.2)
+piece("Was there ever a choice, or was all destined to end here?\n\n", 0.5, 0.2)
+piece("Was there?\n", 0.5, 0.2)
