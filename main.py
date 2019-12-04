@@ -81,7 +81,7 @@ except what's ahead.\n\n""")
       elif choice[0][0] == "h":
         #hide
         piece("The only place to hide, is hanging off the cliff.\nAs you climb down the side.\n3 feet down.\n5 feet down.\n9 feet down.\n\nNo sounds to hear.")
-        piece("Just waitning.\nUntill your grip flaters, {} falls into the void bellow.\n".format(name))
+        piece("Just waiting.\nUntill your grip flaters,\n{} falls into the void bellow.\n".format(name))
 
       else:
         piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
@@ -111,9 +111,9 @@ except what's ahead.\n\n""")
 
       elif choice[0][0] == "c":
         #cave
-        piece("Decending into the cave you pull out your torch.\nOnly to learn of it's nonfunctinal state.")
+        piece("Decending into the cave you pull out your torch.\nOnly to learn of it's nonfunctinal state.\n")
         time.sleep(1)
-        piece("Turning around, you wait ")
+        piece("Turning around, you lose your footing and fall.\nDown,\nDown,\nDown.")
 
       else:
         piece("It's over, {}, indecision has been {}'s downfall.\n".format(name))
