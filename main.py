@@ -136,12 +136,12 @@ while True:
     piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
 
 
-  time.sleep(8)
+  time.sleep(6)
 
   os.system("clear") 
 
-  piece("Only {} and the darkness.\n".format(name), 0.5, 0.2)
-  piece("Was there ever a choice, or was all destined to end here?\n\n", 0.5, 0.2)
+  piece("Only {} and the darkness.\n\n".format(name), 0.5, 0.2)
+  piece("Was there ever a choice, or was all destined to end here?\n\n", 0.5, 0.1)
 
 
   while True:
@@ -158,7 +158,7 @@ while True:
         os.system("clear") 
 
       elif choice[0][0] == "n":
-        piece("The end is all that was wanted.\n\n", 0.5, 0.2)
+        piece("The end is all that was wanted.\n\n", 0.5, 0.1)
         autobreak = True
         break
 
