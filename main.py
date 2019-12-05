@@ -162,6 +162,8 @@ while True:
         autobreak = True
         break
 
+      elif choice == "69":
+        piece("Easter eggs exist.\n\nChange my mind.\n\n")
       else:
         piece("Thats not what I asked for.\n")
     else:
