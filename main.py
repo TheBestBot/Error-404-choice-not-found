@@ -124,7 +124,7 @@ while True:
           piece("Decending into the cave you pull out your torch.\nOnly to learn of it's nonfunctinal state.\n")
           time.sleep(1)
           piece("Turning around, you lose your footing and fall.\nDown,\nDown,\nDown.\n\n")
-          piece("Sore, but alive you open your eyes.\n\nIt was just the same as when they were closed.\n\nThere is nothing left for {} to do, except... \n\nWait".format(name))
+          piece("Sore, but alive you open your eyes.\n\nIt was just the same as when they were closed.\n\nThere is nothing left for {} to do, except... \n\nWait\n".format(name))
 
         else:
           piece("It's over, {}, indecision has been {}'s downfall.\n".format(name, name))
